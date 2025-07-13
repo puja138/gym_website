@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+  /* ✅ Premium Join Now Form Styles */
+  .join-now-section {
+    background: #f8f9fa;
+    padding: 60px 0;
+  }
+
+  .join-now-section h2 {
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333;
+  }
+
+  .join-now-form {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .join-now-form .form-group {
+    margin-bottom: 20px;
+  }
+
+  .join-now-form label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  .join-now-form input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: border-color 0.3s;
+  }
+
+  .join-now-form input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+
+  .join-now-form button {
+    width: 100%;
+    background: #007bff;
+    color: #fff;
+    padding: 14px 0;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: background 0.3s;
+  }
+
+  .join-now-form button:hover {
+    background: #0056b3;
+  }
+
+  /* ✅ Responsive */
+  @media (max-width: 768px) {
+    .join-now-form {
+      padding: 30px 20px;
+    }
+  }
+</style>
+
+
+<section class="join-now-section py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Join {{ plan_name }} Plan</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+
+        <!-- ✅ Single Form for Membership -->
+        <form method="post" class="join-now-form">
+          {% csrf_token %}
+
+          <div class="form-group mb-3">
+            {{ form.full_name.label_tag }}
+            {{ form.full_name }}
+            {% if form.full_name.errors %}
+              <div class="text-danger small">{{ form.full_name.errors }}</div>
+            {% endif %}
+          </div>
+
+          <div class="form-group mb-3">
+            {{ form.email.label_tag }}
+            {{ form.email }}
+            {% if form.email.errors %}
+              <div class="text-danger small">{{ form.email.errors }}</div>
+            {% endif %}
+          </div>
+
+          <div class="form-group mb-3">
+            {{ form.phone.label_tag }}
+            {{ form.phone }}
+            {% if form.phone.errors %}
+              <div class="text-danger small">{{ form.phone.errors }}</div>
+            {% endif %}
+          </div>
+
+          <!-- ✅ Hidden plan input -->
+          {{ form.plan }}
+
+          <button type="submit" class="btn btn-primary w-100">Proceed to Pay</button>
+        </form>
+
+        <!-- ✅ Razorpay payment button AFTER form POST -->
+        {% if payment %}
+          <hr>
+          <h4 class="text-center">Pay Now</h4>
+          <form>
+            <script
+              src="https://checkout.razorpay.com/v1/checkout.js"
+              data-key="{{ key_id }}"
+              data-amount="{{ amount }}"
+              data-currency="INR"
+              data-order_id="{{ payment.id }}"
+              data-buttontext="Pay with Razorpay"
+              data-name="Your Gym"
+              data-description="Membership Payment"
+              data-theme.color="#F37254">
+            </script>
+          </form>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

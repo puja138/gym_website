@@ -1,0 +1,193 @@
+/* HERO */
+.plans-hero {
+  position: relative;
+  background: url('/static/images/pexels-ketut-subiyanto-4999836.jpg') center center/cover no-repeat;
+  height: 100vh;
+}
+
+.plans-hero .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.plans-hero .content {
+  position: relative;
+  z-index: 2;
+}
+
+/* PLAN CARDS */
+.plan-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.plan-card.popular {
+  border: 2px solid #007bff;
+}
+
+/* PRICING TABLE */
+.pricing-table-section table thead {
+  background: #007bff;
+  color: #fff;
+}
+
+.pricing-table-section table tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.pricing-table-section table tbody tr:hover {
+  background: #e9f5ff;
+}
+
+/* ADD-ONS */
+.addon-card {
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.addon-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+}
+
+.addon-card h5 {
+  font-weight: 700;
+}
+
+.addon-card h6 {
+  margin-top: 10px;
+  color: #007bff;
+  font-weight: 600;
+}
+
+/* ==============================
+   ✅ Base Responsive Utilities
+============================== */
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ==============================
+   ✅ Hero Section
+============================== */
+.plans-hero {
+  height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .plans-hero {
+    height: 40vh;
+    padding: 50px 20px;
+  }
+  .plans-hero h1 {
+    font-size: 2rem;
+  }
+  .plans-hero p {
+    font-size: 1rem;
+  }
+}
+
+/* ==============================
+   ✅ Plan Cards
+============================== */
+.plan-card {
+  padding: 30px;
+}
+
+@media (max-width: 768px) {
+  .plan-card {
+    padding: 20px;
+  }
+  .plan-card h2 {
+    font-size: 1.8rem;
+  }
+  .plan-card ul {
+    padding-left: 0;
+  }
+}
+
+/* ==============================
+   ✅ Pricing Table
+============================== */
+.pricing-table-section table {
+  font-size: 1rem;
+}
+
+@media (max-width: 576px) {
+  .pricing-table-section table {
+    font-size: 0.9rem;
+  }
+  .pricing-table-section table thead {
+    font-size: 1rem;
+  }
+}
+
+/* ==============================
+   ✅ FAQ Section (Accordion)
+============================== */
+.accordion-button {
+  font-size: 1rem;
+}
+
+@media (max-width: 576px) {
+  .accordion-button {
+    font-size: 0.95rem;
+  }
+}
+
+/* ==============================
+   ✅ Add-ons Section
+============================== */
+.addon-card {
+  padding: 20px;
+}
+
+.addon-card img {
+  max-width: 40px;
+}
+
+@media (max-width: 768px) {
+  .addons-section .row > div {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .addons-section .row > div {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* ==============================
+   ✅ General Utilities
+============================== */
+h1, h2, h3, h5 {
+  word-break: break-word;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.btn {
+  white-space: nowrap;
+}

@@ -1,0 +1,231 @@
+/* ===================
+   GENERAL UTILITIES
+====================== */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: 80vh;
+}
+
+/* ===================
+   HERO SECTION
+====================== */
+.schedule-hero {
+  background: url('/static/images/pexels-mralpha-24809799.jpg') top center/cover no-repeat;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px;
+  height: 80vh; /* You can change this height */
+  background-position: top center; /* Ensures image sticks to the top */
+}
+
+/* Overlay */
+.schedule-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Text Container */
+.schedule-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Heading */
+.schedule-hero h1 {
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 250px; /* You can reduce if needed */
+}
+
+/* Paragraph */
+.schedule-hero p {
+  font-size: 1.2rem;
+}
+
+
+/* ===================
+   FILTER SECTION
+====================== */
+.filters input,
+.filters select {
+  border-radius: 30px;
+}
+
+.filters button {
+  border-radius: 30px;
+}
+
+/* ===================
+   TABLE STYLING
+====================== */
+.schedule-table table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.schedule-table thead th {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.schedule-table tbody tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+/* ===================
+   CLASS DETAILS CARDS
+====================== */
+.class-details .card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.class-details .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.class-details .card-img-top {
+  height: 220px;
+  object-fit: cover;
+}
+
+.class-details .card-title {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.class-details .btn-success {
+  border-radius: 30px;
+}
+
+@media (min-width: 1200px) {
+  .class-details .col-md-4 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .class-details .col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .class-details .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* ===================
+   NOTICES SECTION
+====================== */
+.notices {
+  font-size: 1.1rem;
+}
+
+/* ===================
+   UPCOMING EVENTS CARDS
+====================== */
+.events .event-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.events .event-card {
+  flex: 0 0 300px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.events .event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.events .event-card i {
+  font-size: 40px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.events .event-card h5 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.events .event-card p {
+  font-size: 0.95rem;
+}
+
+/* ===================
+   DOWNLOAD & CONTACT CTA
+====================== */
+.download-cta,
+.contact-cta {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+}
+
+.download-cta h2,
+.contact-cta h2 {
+  font-weight: 700;
+}
+
+.download-cta .btn,
+.contact-cta .btn {
+  border-radius: 30px;
+}
+
+.download-cta,
+.contact-cta {
+  padding: 60px 20px;
+}
+
+/* ===================
+   MOBILE OPTIMIZATIONS
+====================== */
+@media (max-width: 768px) {
+  .schedule-hero {
+  
+    background-position: center center;
+  }
+  .schedule-hero h1 {
+    font-size: 2rem;
+  }
+  .filters .row > div {
+    margin-bottom: 10px;
+  }
+}

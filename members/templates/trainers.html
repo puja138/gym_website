@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- ✅ HERO SECTION -->
+<section class="trainers-hero">
+  <div class="hero-content">
+    <h1>Meet Our Trainers</h1>
+    <p>Certified. Experienced. Motivating You Every Step of the Way.</p>
+    <a href="#" class="hero-cta-btn">Book a Free Session</a>
+  </div>
+</section>
+
+<!-- ✅ TRAINERS GRID -->
+<section class="trainers-list container">
+  <div class="trainer-card">
+    <div class="trainer-img">
+      <img src="{% static 'images/pexels-lishakov-4083049.jpg' %}" alt="Trainer 1">
+      <span class="badge">Certified</span>
+    </div>
+    <h3>John Doe</h3>
+    <p>Strength Coach</p>
+    <p class="specialties">Weightlifting, Bodybuilding</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+    </div>
+  </div>
+
+  <div class="trainer-card">
+    <div class="trainer-img">
+      <img src="{% static 'images/pexels-elly-fairytale-3823155.jpg' %}" alt="Trainer 2">
+      <span class="badge">Expert</span>
+    </div>
+    <h3>Sarah Lee</h3>
+    <p>Yoga Instructor</p>
+    <p class="specialties">Hatha Yoga, Meditation</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+    </div>
+  </div>
+
+  <div class="trainer-card">
+    <div class="trainer-img">
+      <img src="{% static 'images/pexels-koolshooters-9943222.jpg' %}" alt="Trainer 3">
+      <span class="badge">Certified</span>
+    </div>
+    <h3>Mike Johnson</h3>
+    <p>CrossFit Trainer</p>
+    <p class="specialties">HIIT, Endurance</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+    </div>
+  </div>
+
+  <div class="trainer-card">
+    <div class="trainer-img">
+      <img src="{% static 'images/pexels-cottonbro-7674497.jpg' %}" alt="Trainer 4">
+      <span class="badge">Certified</span>
+    </div>
+    <h3>Emily Smith</h3>
+    <p>Nutrition Coach</p>
+    <p class="specialties">Weight Loss, Diet Plans</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+    </div>
+  </div>
+
+  <div class="trainer-card">
+    <div class="trainer-img">
+      <img src="{% static 'images/pexels-tima-miroshnichenko-5327458.jpg' %}" alt="Trainer 5">
+      <span class="badge">Expert</span>
+    </div>
+    <h3>Chris Brown</h3>
+    <p>Personal Trainer</p>
+    <p class="specialties">Functional Training</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+    </div>
+  </div>
+
+  <div class="trainer-card">
+    <div class="trainer-img">
+      <img src="{% static 'images/pexels-jordan-bergendahl-2628960-13219897.jpg' %}" alt="Trainer 6">
+      <span class="badge">Certified</span>
+    </div>
+    <h3>Anna Wilson</h3>
+    <p>Pilates Instructor</p>
+    <p class="specialties">Flexibility, Core Strength</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+    </div>
+  </div>
+
+  <div class="trainer-card">
+    <div class="trainer-img">
+      <img src="{% static 'images/pexels-cliff-booth-4058411.jpg' %}" alt="Trainer 7">
+      <span class="badge">Expert</span>
+    </div>
+    <h3>David Miller</h3>
+    <p>Boxing Coach</p>
+    <p class="specialties">Cardio, Self Defense</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,408 @@
+/* HERO SECTION */
+.hero-section {
+  position: relative;
+  background: url('/static/images/pexels-lngdik23-18075004.jpg') center center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-section .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  color: #fff;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 5rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+}
+
+.find-gym-section input[type="text"] {
+  padding: 0.75rem;
+  width: 300px;
+  max-width: 90%;
+  margin-right: 1rem;
+}
+
+/* WHY CHOOSE ANYTIME FITNESS SECTION */
+.why-us-section {
+  background:white; /* soft light color, change as needed */
+  padding: 80px 0;
+  position: relative;
+  text-align: center;
+}
+
+.why-us-heading {
+  font-size: 4rem;  /* like h1 */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* clean sans-serif */
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 60px;
+}
+
+.why-us-section p {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+.why-large-image img {
+  width: 100%;         /* responsive container */
+  max-width: 1500px;   /* PC size max */
+  height: 800px; 
+  margin-bottom: 60px;     
+  object-fit: cover;   /* maintain aspect ratio */
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  display: block;
+  margin: 0 auto;
+}
+
+/* PREMIUM FEATURE CARDS */
+.why-us-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.why-card {
+  background: #e8f5e9;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  flex: 1 1 200px; /* flexible width */
+  max-width: 220px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.why-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #222;
+  font-weight: 700;
+}
+
+.why-card p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Responsive cards */
+@media (max-width: 768px) {
+  .why-us-heading {
+    font-size: 2.5rem;
+  }
+
+  .why-large-image img {
+    height: auto;
+  }
+
+  .why-us-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .why-card {
+    max-width: 90%;
+  }
+}
+
+/* CARD ROWS COMMON STYLING WITH SIZE & GAP TWEAK */
+section .row {
+  margin-bottom: 60px;
+}
+
+section .row img {
+  width: 100%;
+  max-width: 750px;  /* ✅ Image size chhota PC par */
+  height: 500px;
+  display: block;
+  margin: 0 auto;   /* ✅ Center */
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+section .row img:hover {
+  transform: scale(1.02);
+}
+
+section .row .col-md-6 {
+  padding: 0 20px;
+}
+
+section .row.flex-md-row-reverse .col-md-6 {
+  padding-left: 40px;  /* ✅ adjust for Image Right, Text Left row */
+  padding-right: 20px;
+}
+
+section .row h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+section .row p {
+  font-size: 1.5rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+section .btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 35px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+section .btn:hover {
+  background-color: #0056b3;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+section .btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.5);
+}
+
+@media (max-width: 768px) {
+  section .row {
+    margin-bottom: 40px;
+  }
+
+  section .row .col-md-6 {
+    padding: 0; /* Mobile: full width */
+  }
+
+  section .row h2 {
+    font-size: 1.5rem;
+  }
+
+  section .btn {
+    padding: 10px 30px;
+    font-size: 0.95rem;
+  }
+}
+
+
+/* ✅ FIND A GYM SECTION */
+.find-gym-section {
+  background: #fefefe; /* clean light background */
+  padding: 80px 0;
+}
+
+.location-img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.location-img:hover {
+  transform: scale(1.02);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.gym-search-form .input-group {
+  display: flex;
+  max-width: 500px;
+}
+
+.gym-search-form .form-control {
+  border-radius: 50px 0 0 50px;
+  padding: 14px 20px;
+  border: 2px solid #0d6efd;
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.gym-search-form .form-control:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+  border: 2px solid #0d6efd;
+}
+
+.gym-search-form .btn-primary {
+  border-radius: 0 50px 50px 0;
+  background: #0d6efd;
+  border: 2px solid #0d6efd;
+  padding: 14px 30px;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.gym-search-form .btn-primary:hover {
+  background: #084298;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .gym-search-form .input-group {
+    flex-direction: column;
+  }
+
+  .gym-search-form .form-control,
+  .gym-search-form .btn-primary {
+    border-radius: 50px;
+    width: 100%;
+  }
+
+  .gym-search-form .btn-primary {
+    margin-top: 10px;
+  }
+}
+
+/* ✅ CTA BANNER SECTION */
+.cta-banner {
+  background: #f8f9fa; /* Soft light background */
+  padding: 80px 0;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1); /* ✅ Premium shadow */
+  border-radius: 12px;  /* Optional: subtle rounded edges */
+  position: relative;
+  z-index: 1;
+}
+
+.cta-banner h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.cta-banner .btn {
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.cta-banner .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ QUICK READS SECTION WRAPPER */
+.quick-reads-section {
+  background: #f8f9fa;  /* Soft light background */
+  padding: 80px 0;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);  /* Light section shadow */
+  border-radius: 12px;  /* Optional: rounded edges for the whole section */
+}
+
+.quick-reads-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.quick-reads-section p {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  color: #555;
+}
+
+/* ✅ BLOG CARDS */
+.quick-read-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);  /* Clean subtle card shadow */
+  transition: all 0.3s ease;
+  height: 100%;  /* Make cards equal height */
+  display: flex;
+  flex-direction: column;
+}
+
+.quick-read-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.quick-read-card img {
+  border-radius: 8px;
+}
+
+.quick-read-card h5 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.quick-read-card p {
+  flex-grow: 1;  /* Makes button stay at bottom */
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.quick-read-card .btn {
+  align-self: flex-start;
+  font-size: 0.9rem;
+  padding: 8px 20px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.quick-read-card .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ RESPONSIVE */
+@media (max-width: 768px) {
+  .quick-reads-section {
+    padding: 60px 0;
+  }
+
+  .quick-reads-section h2 {
+    font-size: 2rem;
+  }
+
+  .quick-read-card {
+    margin-bottom: 30px;
+  }
+}

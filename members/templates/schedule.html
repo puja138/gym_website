@@ -1,0 +1,218 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- ✅ HERO SECTION -->
+<section class="schedule-hero text-center py-5 bg-dark text-light">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Weekly Class Schedule</h1>
+    <p class="lead">Plan your week, book your classes & stay on track!</p>
+  </div>
+</section>
+
+<!-- ✅ FILTER SECTION -->
+<section class="filters py-4 bg-light">
+  <div class="container">
+    <form class="row gy-2 gx-3 align-items-center">
+      <div class="col-md-3">
+        <input type="text" class="form-control" placeholder="Search by Trainer">
+      </div>
+      <div class="col-md-3">
+        <select class="form-select">
+          <option selected>Class Type</option>
+          <option>Yoga</option>
+          <option>HIIT</option>
+          <option>Crossfit</option>
+          <option>Pilates</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <select class="form-select">
+          <option selected>Day</option>
+          <option>Monday</option>
+          <option>Tuesday</option>
+          <option>Wednesday</option>
+          <option>Thursday</option>
+          <option>Friday</option>
+          <option>Saturday</option>
+          <option>Sunday</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <button class="btn btn-primary w-100">Apply Filters</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ✅ WEEKLY TIMETABLE TABLE -->
+<section class="schedule-table py-5">
+  <div class="container">
+    <div class="table-responsive">
+      <table class="table table-bordered text-center">
+        <thead class="table-dark">
+          <tr>
+            <th>Time</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+            <th>Sunday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>6:00 AM</td>
+            <td>Yoga</td>
+            <td>Crossfit</td>
+            <td>Yoga</td>
+            <td>HIIT</td>
+            <td>Pilates</td>
+            <td>Zumba</td>
+            <td>Rest</td>
+          </tr>
+          <tr>
+            <td>7:00 AM</td>
+            <td>HIIT</td>
+            <td>Yoga</td>
+            <td>Strength</td>
+            <td>Pilates</td>
+            <td>Crossfit</td>
+            <td>Zumba</td>
+            <td>Rest</td>
+          </tr>
+          <!-- Add more rows as needed -->
+          <tr>
+            <td>8:00 AM</td>
+            <td>Pilates</td>
+            <td>HIIT</td>
+            <td>Zumba</td>
+            <td>Yoga</td>
+            <td>Strength</td>
+            <td>Yoga</td>
+            <td>Rest</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ CLASS DETAILS CARDS -->
+<section class="class-details py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Class Details</h2>
+    <div class="row">
+      <!-- Card 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow">
+          <img src="{% static 'images/pexels-anastasia-shuraeva-4944958.jpg' %}" class="card-img-top" alt="Yoga Class">
+          <div class="card-body">
+            <h5 class="card-title">Morning Yoga</h5>
+            <p class="card-text">Trainer: Sarah Smith</p>
+            <p class="card-text">Duration: 45 mins | Level: Beginner</p>
+            <p class="card-text">Studio 1</p>
+            <a href="#" class="btn btn-success w-100">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow">
+          <img src="{% static 'images/pexels-leonardho-1552249.jpg' %}" class="card-img-top" alt="HIIT Class">
+          <div class="card-body">
+            <h5 class="card-title">HIIT Blast</h5>
+            <p class="card-text">Trainer: John Doe</p>
+            <p class="card-text">Duration: 60 mins | Level: Intermediate</p>
+            <p class="card-text">Studio 2</p>
+            <a href="#" class="btn btn-success w-100">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow">
+          <img src="{% static 'images/pexels-elly-fairytale-3822220.jpg' %}" class="card-img-top" alt="Pilates">
+          <div class="card-body">
+            <h5 class="card-title">Pilates Flow</h5>
+            <p class="card-text">Trainer: Emily Clark</p>
+            <p class="card-text">Duration: 50 mins | Level: All Levels</p>
+            <p class="card-text">Studio 3</p>
+            <a href="#" class="btn btn-success w-100">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- ✅ New Card 4 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow">
+          <img src="{% static 'images/pexels-thelazyartist-2247179.jpg' %}" class="card-img-top" alt="Strength Training">
+          <div class="card-body">
+            <h5 class="card-title">Strength Training</h5>
+            <p class="card-text">Trainer: Mike Johnson</p>
+            <p class="card-text">Duration: 55 mins | Level: Advanced</p>
+            <p class="card-text">Studio 4</p>
+            <a href="#" class="btn btn-success w-100">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- ✅ SPECIAL NOTICES SECTION -->
+<section class="notices py-4 bg-warning text-dark text-center">
+  <div class="container">
+    <p class="mb-0 fw-bold">📢 Note: No classes on public holidays. Special Workshop on Sunday 5 PM!</p>
+  </div>
+</section>
+<!-- ✅ UPCOMING EVENTS -->
+<section class="events py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-5">Upcoming Events</h2>
+    <div class="event-cards">
+      <!-- Event 1 -->
+      <div class="event-card">
+        <i class="fas fa-dumbbell"></i>
+        <h5>Strength Bootcamp</h5>
+        <p>Join our intensive strength bootcamp on Sunday 7 AM.</p>
+      </div>
+      <!-- Event 2 -->
+      <div class="event-card">
+        <i class="fas fa-running"></i>
+        <h5>Marathon Prep</h5>
+        <p>Saturday workshop for 5K runners. Tips & nutrition.</p>
+      </div>
+      <!-- Event 3 -->
+      <div class="event-card">
+        <i class="fas fa-leaf"></i>
+        <h5>Yoga & Detox</h5>
+        <p>Special detox yoga class with nutrition talk. Sunday 6 PM.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ✅ DOWNLOAD CTA -->
+<section class="download-cta py-5 bg-primary text-white text-center">
+  <div class="container">
+    <h2 class="mb-3">Want the Schedule Offline?</h2>
+    <a href="#" class="btn btn-light">Download PDF</a>
+  </div>
+</section>
+
+<!-- ✅ CONTACT CTA -->
+<section class="contact-cta py-5 text-center">
+  <div class="container">
+    <h2>Need Help? Get in Touch!</h2>
+    <p>📞 +91-9876543210 | 📧 info@yourgym.com</p>
+    <a href="/contact" class="btn btn-dark">Contact Us</a>
+  </div>
+</section>
+
+{% endblock %}

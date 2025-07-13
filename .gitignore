@@ -1,0 +1,19 @@
+# Python cache
+*.pyc
+__pycache__/
+
+# Virtual env folder
+venv/
+
+# Local SQLite DB file (safe to keep for any switch)
+db.sqlite3
+
+# Secrets
+.env
+
+# VS Code configs (optional)
+.vscode/
+.idea/
+
+# Static files collected (for whitenoise)
+staticfiles/
