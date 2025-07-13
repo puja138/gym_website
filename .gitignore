@@ -17,3 +17,8 @@ db.sqlite3
 
 # Static files collected (for whitenoise)
 staticfiles/
+
+dj-database-url
+python-dotenv
+whitenoise
+gunicorn
